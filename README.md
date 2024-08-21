@@ -22,14 +22,14 @@ We explore how these setups affect the evaluation of system responses across fou
 │   ├── Crowdworkers/
 │   │   ├── withuser.json
 │   │   └── withoutuser.json
-│   ├── LLMs/
-│   │   ├── withuser.json
-│   │   └── withoutuser.json
-│   └── Prompts/
-│       ├── relevance.txt
-│       ├── usefulness.txt
-│       ├── interestingness.txt
-│       └── explanation_quality.txt
+│   └── LLMs/
+│       ├── withuser.json
+│       └── withoutuser.json
+├── Prompts/
+│   ├── relevance_prompt.txt
+│   ├── usefulness_prompt.txt
+│   ├── interestingness_prompt.txt
+│   └── explanation_quality_prompt.txt
 └── README.md
 ```
 
@@ -83,7 +83,7 @@ Our study focuses on four key aspects of dialogue system evaluation:
 
 ## Prompts
 
-The `Data/Prompts/` directory contains the prompts used for dialogue aspect assessment by gpt-3.5-turbo. These prompts were carefully crafted to guide the LLM in evaluating dialogues across four aspects: relevance, usefulness, interestingness, and explanation quality. Each aspect has its own specific prompt:
+The `Prompts/` directory contains the prompts used for dialogue aspect assessment by gpt-3.5-turbo. These prompts were carefully crafted to guide the LLM in evaluating dialogues across four aspects: relevance, usefulness, interestingness, and explanation quality. Each aspect has its own specific prompt:
 
 - `relevance.txt`: For evaluating how well the system's response aligns with the user's query.
 - `usefulness.txt`: For assessing the practical value of the response in addressing the user's needs.
