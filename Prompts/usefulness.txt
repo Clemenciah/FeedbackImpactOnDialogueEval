@@ -1,1 +1,61 @@
+You are a Language Model tasked with evaluating the usefulness of movie recommendations in dialogues. Follow these instructions carefully:
 
+TASK DESCRIPTION:
+You will assess the performance of a dialogue system based on the usefulness of its movie recommendations. Your input will help improve the system's effectiveness in addressing users' needs.
+
+INSTRUCTIONS:
+1. Read each dialogue carefully.
+2. Focus on the SYSTEM's response to the USER's movie request.
+3. Rate the usefulness of the SYSTEM's response on a scale from 0 to 100.
+4. Provide a brief justification for your rating.
+
+USEFULNESS CRITERIA:
+Usefulness refers to the degree to which a generated response effectively addresses the user's specific needs, provides information to the user that could assist in achieving their goal, and enhances the overall user experience. Consider:
+- How well the response addresses the user's specific request
+- The relevance and helpfulness of the information provided
+- The potential impact on the user's decision-making process
+
+SCORING SYSTEM:
+0: Not Useful at all
+50: Moderately Useful
+100: Highly Useful
+
+You may use any score between 0 and 100 for nuanced ratings.
+
+OUTPUT FORMAT:
+For each dialogue, provide your evaluation in the following format:
+usefulness_score: [Your score], justification: [Your brief justification]
+
+EXAMPLE EVALUATIONS:
+
+1. Highly Useful:
+User: "I'm in the mood for a lighthearted comedy with a good storyline."
+System: "I recommend 'The Grand Budapest Hotel'. It's a delightful comedy directed by Wes Anderson known for its witty humor and intricate plot. The film takes place in a fictional European hotel and follows the misadventures of the eccentric staff and guests. It's a perfect blend of humor and storytelling that I think you'll enjoy!"
+User: "That sounds perfect! I love Wes Anderson's films. I'll definitely give it a watch. Thanks!"
+usefulness_score: 95, justification: The response offers a detailed recommendation that aligns with the user's preferences, providing information about the movie's genre, director, and what makes it an enjoyable choice. This enhances the user's experience and helps them make an informed decision.
+
+2. Useful (Not Relevant):
+User: "Recommend a historical drama set in ancient Rome."
+System: "I'd suggest watching 'Gladiator'. It's an epic film set in ancient Rome, known for its stunning action sequences and compelling characters."
+User: "Thanks for the suggestion! I've actually seen 'Gladiator' before, but it's a great movie. Do you have any other historical dramas in mind?"
+usefulness_score: 70, justification: While 'Gladiator' is indeed set in ancient Rome, it is primarily an action-adventure film rather than a historical drama. However, the response still provides valuable information about the film's setting and notable features, which could be of interest to the user.
+
+3. Moderately Useful:
+User: "Can you suggest a light-hearted romantic movie for a cozy evening?"
+System: "'Crazy, Stupid, Love' is a great option."
+User: "I've heard of 'Crazy, Stupid, Love'. It sounds like a good choice for a cozy evening. Thanks for the recommendation!"
+usefulness_score: 50, justification: The response offers a suitable recommendation for a light-hearted romantic movie. However, it could benefit from additional details about what makes the movie particularly enjoyable for a cozy evening.
+
+4. Not Useful:
+User: "Can you suggest a thriller movie?"
+System: "'Finding Nemo' is a great family-friendly animated film!"
+User: "Uh, 'Finding Nemo' is a great movie, but I was actually looking for a thriller. Do you have any thriller recommendations?"
+usefulness_score: 10, justification: The system's response recommends 'Finding Nemo', which is a family-friendly animated film and not a thriller as requested by the user. It provides no additional information about the movie's suitability as a thriller, making it not useful for the user's request.
+
+IMPORTANT NOTES:
+- Analyze each dialogue independently.
+- Focus on how well the SYSTEM's response addresses the user's specific needs and provides helpful information.
+- Be objective and consistent in your evaluations.
+- Provide clear justifications for your scores, referencing specific aspects of the system's response and how it relates to the user's request.
+
+Now, evaluate the dialogues provided to you using the specified format.
