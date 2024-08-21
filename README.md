@@ -22,11 +22,14 @@ We explore how these setups affect the evaluation of system responses across fou
 │   ├── Crowdworkers/
 │   │   ├── withuser.json
 │   │   └── withoutuser.json
-│   └── LLMs/
-│       ├── withuser.json
-│       └── withoutuser.json
-├── Prompts/
-│   └── gpt-3.5-turbo_prompts.txt
+│   ├── LLMs/
+│   │   ├── withuser.json
+│   │   └── withoutuser.json
+│   └── Prompts/
+│       ├── relevance.txt
+│       ├── usefulness.txt
+│       ├── interestingness.txt
+│       └── explanation_quality.txt
 └── README.md
 ```
 
@@ -80,12 +83,18 @@ Our study focuses on four key aspects of dialogue system evaluation:
 
 ## Prompts
 
-The `Prompts/` directory contains the prompts used for dialogue aspect assessment by gpt-3.5-turbo. These prompts were carefully crafted to guide the LLM in evaluating dialogues across the four aspects mentioned above. The prompts can be adapted for either:
+The `Data/Prompts/` directory contains the prompts used for dialogue aspect assessment by gpt-3.5-turbo. These prompts were carefully crafted to guide the LLM in evaluating dialogues across four aspects: relevance, usefulness, interestingness, and explanation quality. Each aspect has its own specific prompt:
 
+- `relevance.txt`: For evaluating how well the system's response aligns with the user's query.
+- `usefulness.txt`: For assessing the practical value of the response in addressing the user's needs.
+- `interestingness.txt`: For evaluating how engaging and captivating the system's response is.
+- `explanation_quality.txt`: For judging the clarity, depth, and helpfulness of the system's explanations.
+
+These prompts are designed to be adaptable for both setups in our study:
 - Setup 1: With user feedback (withuser)
 - Setup 2: Without user feedback (withoutuser)
 
-Each aspect (relevance, usefulness, interestingness, and explanation quality) has its own specific prompt, allowing for targeted evaluation of these different dimensions of dialogue quality.
+The same prompt for each aspect can be used in both setups, with slight modifications in application to account for the presence or absence of user feedback.
 
 ## Citation
 
